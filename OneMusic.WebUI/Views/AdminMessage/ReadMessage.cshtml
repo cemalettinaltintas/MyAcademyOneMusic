@@ -1,0 +1,15 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "ReadMessage";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Mesaj Detayı</h3>
+
+<b><label>Adı Soyadı :</label></b><span>@Model.Name</span>
+<br /><br />
+<b><label>E-mail :</label></b><span>@Model.Email</span>
+<br /><br />
+<b><label>Konu :</label></b><span>@Model.Subject</span>
+<br /> <br />
+<b><label>Mesaj :</label></b><span>@Model.Content</span>

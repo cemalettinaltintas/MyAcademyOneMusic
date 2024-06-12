@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+    <!-- ##### Breadcumb Area Start ##### -->
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/one-music-gh-pages/img/bg-img/breadcumb.jpg);">
+        <div class="bradcumbContent">
+            <p>Bize Ulaşın</p>
+            <h2>İletişim</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+    <!-- ##### Contact Area Start ##### -->
+@await Component.InvokeAsync("_DefaultContactInfoComponent")
+@await Component.InvokeAsync("_DefaultContactMessageComponent")
+    <!-- ##### Contact Area End ##### -->
+    <!-- ##### Contact Area Start ##### -->
+
+
+    
+
+

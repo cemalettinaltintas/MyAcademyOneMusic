@@ -1,0 +1,69 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RegistrationForm_v5 by Colorlib</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="~/colorlib-regform-21/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="~/colorlib-regform-21/css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="inner">
+			<form asp-action="Signup" method="post">
+				<h3>OneMusic Kayıt Formu</h3>
+				
+				
+				<div class="form-wrapper">
+					<label for="" class="label-input">Ad</label>
+					<input type="text" asp-for="Name" class="form-control" required>
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">Soyad</label>
+					<input type="text" asp-for="Surname" class="form-control" required>
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">EMail</label>
+					<input type="email" asp-for="Email" class="form-control" required>
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">Kullanıcı Adı</label>
+					<input type="text" asp-for="UserName" class="form-control" required>
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">Şifre</label>
+					<input type="password" asp-for="Password" class="form-control" required>
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">Şifre Tekrar</label>
+					<input type="password" asp-for="ConfirmPassword" class="form-control" required>
+				</div>
+
+				<div style="color:red">
+					@Html.ValidationSummary()
+				</div>
+				
+				<button>Kayıt Ol</button>
+			</form>
+			<div >
+				<img src="https://th.bing.com/th/id/R.80e359c44ef41889fe3d5b1e3fa7a8d9?rik=cclzyMvWhJ7NFQ&riu=http%3a%2f%2fwww.eventorganizermalaysia.com%2fwp-content%2fuploads%2fmusic-event.jpg&ehk=FCfx54TEhu9u4p02Qmgmje8S8CC9Wy7Y5%2fnnpbW1clE%3d&risl=&pid=ImgRaw&r=0" style="width:530px;height:450px" alt="">
+			</div>
+		</div>
+	</div>
+
+	<script src="~/colorlib-regform-21/js/jquery-3.3.1.min.js"></script>
+	<script src="~/colorlib-regform-21/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,13 @@
+﻿@model List<AppUser>
+<section class="miscellaneous-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <!-- ***** Weeks Top ***** -->
+            @await Component.InvokeAsync("_DefaultLatestAlbumComponent")
+            <!-- ***** New Hits Songs ***** -->
+            @await Component.InvokeAsync("_DefaultHitSongComponent")
+            <!-- ***** Popular Artists ***** -->
+            @await Component.InvokeAsync("_DefaultTopSingersComponent")
+        </div>
+    </div>
+</section>

@@ -1,0 +1,59 @@
+﻿@model List<Song>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!-- Preloader -->
+<div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<!-- ##### Breadcumb Area Start ##### -->
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/one-music-gh-pages/img/bg-img/breadcumb3.jpg);">
+    <div class="bradcumbContent">
+        <p>Albüme Ait Şarkılar</p>
+        <h2>@ViewBag.albumName</h2>
+    </div>
+</section>
+<!-- ##### Breadcumb Area End ##### -->
+<div class="one-music-songs-area mb-70 mt-70">
+    <div class="container">
+        <div class="row">
+
+            <!-- Single Song Area -->
+            <div class="col-12">
+                @if (Model.Count > 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                            <div style="object-fit:cover;" width="100%" class="song-thumbnail">
+                                <img src="@item.Album.CoverImage" alt="">
+                            </div>
+                            <div class="song-play-area">
+                                <div class="song-name">
+                                    <p>@item.SongName</p>
+                                </div>
+                                <audio preload="auto" controls>
+                                    <source src="@item.SongUrl">
+                                </audio>
+                            </div>
+
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="container-fluid text-center alert alert-primary">Sanatçı bu albüme henüz şarkı eklemesi yapmamış.</div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
