@@ -9,6 +9,8 @@ M&Y Yazılım Eğitim Danışmaklık bünyesindeki Full Stack .Net Develeloper B
 - FluentValidation
 - EF Code First
 
+Likedin Profilim : https://www.linkedin.com/in/cemalettinaltintas/
+
 ## Özellikler
 - N Kaatmanlı Mimari
 - Repository Design Pattern
